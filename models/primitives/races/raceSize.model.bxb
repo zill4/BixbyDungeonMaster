@@ -1,0 +1,3 @@
+text (raceSize) {
+  description (The given size of a race in DnD 5e.)
+}

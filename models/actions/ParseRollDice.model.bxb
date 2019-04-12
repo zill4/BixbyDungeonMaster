@@ -1,0 +1,21 @@
+action (ParseRollDice) {
+  type (Calculation)
+     collect {
+    // Try to define input as a parsable string.
+       input (parseNumSides) {
+         type (ParseNumSidesConcept)
+         min (Required)
+         max (One)
+         default-init {
+           intent {
+          // We should assume that some sides are given.
+             goal { ParseNumSidesConcept }
+             value {
+               ParseNumSidesConcept("1D20")
+             }
+           }
+         }
+       } 
+     }
+     output (RollResultConcept)
+}

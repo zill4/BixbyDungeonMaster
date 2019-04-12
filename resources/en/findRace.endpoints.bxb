@@ -1,0 +1,13 @@
+endpoints {
+  authorization {
+    none
+    // or add OAuth configuration
+  }
+
+  action-endpoints {
+    action-endpoint (findRace) {
+      accepted-inputs (name)
+      local-endpoint (races/FindRaces.js)
+    }
+  }
+}
