@@ -1,4 +1,0 @@
-text  (ParseNumSidesConcept) {
-  description (A string representing the number of sides to a dice.)
-  //inhert from js file that will parse it with regex 
-}

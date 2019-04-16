@@ -1,3 +1,0 @@
-integer  (raceSpeed) {
-  description (The DnD 5e race's speed.)
-}

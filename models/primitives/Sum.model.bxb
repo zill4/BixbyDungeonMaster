@@ -1,3 +1,0 @@
-integer (SumConcept) {
-  description (The total sum of all the dice rolled.)
-}

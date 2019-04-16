@@ -1,3 +1,0 @@
-integer (NumSidesConcept) {
-  description (The number of sides to the dice.)
-}

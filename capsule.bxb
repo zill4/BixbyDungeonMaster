@@ -1,8 +1,0 @@
-capsule {
-  id (project.dndMaster)
-  version (0.1.0)
-  format (3)
-  targets {
-    target (bixby-mobile-en-US)
-  }
-}

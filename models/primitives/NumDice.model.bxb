@@ -1,3 +1,0 @@
-integer (NumDiceConcept) {
-  description (The number of dice to throw.)
-}

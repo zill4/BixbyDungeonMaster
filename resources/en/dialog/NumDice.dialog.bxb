@@ -1,8 +1,0 @@
- dialog (Concept) {
-   match {
-     // Look for this type
-     NumDiceConcept
-   }
-   // Use this template text with this type
-   template("number of dice")
- }
