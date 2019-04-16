@@ -10,6 +10,6 @@ structure (languages) {
   property (typicalSpeakers)
   {
     type (typicalSpeaker)
-    min (Required) max (Many)
+    min (Optional) max (Many)
   }
 }
