@@ -1,11 +1,11 @@
 endpoints {
    action-endpoints {
      action-endpoint (RollDice) {
-       accepted-inputs (numDice, numSides)
+       accepted-inputs (numDice, numSides, modif)
        local-endpoint ("dice/RollDice.js")
       }
-      action-endpoint (ParseRollDice) {
-      accepted-inputs (parseNumSides)
+    action-endpoint (ParseRollDice) {
+      accepted-inputs (parseNumSides, modif)
       local-endpoint ("dice/ParseRoll.js")
     }
     action-endpoint (findQuest) {

@@ -1,18 +1,19 @@
 //Start the quest. Initialize the game state.
 exports.function = function(quest) {
-  state = {
+  gameState = {
     quest: quest,
     started: true,
-    completed: quest.entries.length == 0,
-    currentQuestion: quest.entries[0],
-    lastScore: null,
+    completed: quest.events.length == 0,
+    currentEvent: quest.events[0],
+    lastEntry: null,
     journal: {
       entries: [],
       correctAnswerCount: 0,
-      entryAnsweredCount: 0,
-      entryLeftCount: quest.entries.length,
+      eventsAnsweredCount: 0,
+      eventsLeftCount: quest.events.length,
     }
   }
-
   return gameState
 }
+
+

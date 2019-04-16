@@ -12,5 +12,11 @@ structure (option) {
     min (Required) max (One)
     visibility (Private)
   }
-
+// Each option pesents another event course to take
+  property (event)
+  {
+    type(event)
+    description ("The event chain that is triggered by the given option.")
+    min (Optional) max (One)
+  }
 }

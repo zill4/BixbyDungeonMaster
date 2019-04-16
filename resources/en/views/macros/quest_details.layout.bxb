@@ -20,7 +20,7 @@ layout-macro-def(quest-details) {
       }
       image-url {
         // was quest.image.url
-        template ("[#{value(quest.image)}]")
+        template ("[#{value(quest.image.url)}]")
       }
     }
   }

@@ -23,7 +23,7 @@ function buildEventsFromJson(questJson) {
   var events = []
   for (var i=0; i< questJson.events.length; i++) {
     events.push(buildEventFromJson(questJson.events[i], i))
-  }
+  } 
   return events
 }
 

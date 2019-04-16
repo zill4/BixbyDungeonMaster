@@ -1,29 +1,68 @@
- result-view {
-   match {
-     RollResultConcept (rollResult)
-   }
-   render {
-     layout {
-       section {
-         content {
-           single-line {
-             text {
-               style (Detail_M)
-               value ("Sum: #{value(rollResult.sum)}")
-             }
-           }
-           single-line {
-             text {
-               style (Detail_M)
-               value ("Rolls: #{value(rollResult.roll)}")
-             }
-           }
-          image {
-            aspect-ratio (1:1)
-            url ("https://cdn.filestackcontent.com/fG8Ct8L4REGWPZX0mOa3")
+result-view {
+  match {
+    RollResultConcept (rollResult)
+  }
+
+  render {
+    layout {
+      section {
+        content {
+          if (exists(rollResult.modif) && rollResult.modif == 'advantage') {
+            single-line {
+              text {
+                style (Detail_M)
+                value ("Sum: #{value(rollResult.sum)}")
+              }
+            }
+            single-line {
+              text {
+                style (Detail_M)
+                value ("Chosen: #{value(rollResult.max)}")
+              }
+            }
+            single-line {
+              text {
+                style (Detail_M)
+                value ("Tossed: #{value(rollResult.min)}")
+              }
+            }
           }
-         }
-       }
-     }
-   }
- }
+          else-if (exists(rollResult.modif) && rollResult.modif == 'disadvantage') {
+            single-line {
+              text {
+                style (Detail_M)
+                value ("Sum: #{value(rollResult.sum)}")
+              }
+            }
+            single-line {
+              text {
+                style (Detail_M)
+                value ("Chosen: #{value(rollResult.min)}")
+              }
+            }
+            single-line {
+              text {
+                style (Detail_M)
+                value ("Tossed: #{value(rollResult.max)}")
+              }
+            }
+          }
+          else {
+            single-line {
+              text {
+                style (Detail_M)
+                value ("Sum: #{value(rollResult.sum)}")
+              }
+            }
+            single-line {
+              text {
+                style (Detail_M)
+                value ("Rolls: #{value(rollResult.max)}")
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

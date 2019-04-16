@@ -1,0 +1,7 @@
+structure (image) {
+  description (The url for a given image.)
+  property (url) {
+    type (url)
+    min (Required) max (One)
+  }
+}

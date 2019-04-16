@@ -1,8 +1,3 @@
-train (t-i8k2cup9jtyh14omlcpth37v5) {
-  utterance ("[g:RollResultConcept] Roll (2)[v:NumDiceConcept] (6)[v:NumSidesConcept]-sided dice.")
-  plan (Y2BhUCvISaxML8ovzUvRS8lL8U0sLkkt0gvKz8kJSi0uzSlxzs9LTi0oYZDFqc4lMzmVQRmrtF9pLkgWZoYKLkXBmSmpxTBVzAyMDExAkgFIgyAEgPhgUQA=)
-  last-modified (1555103037640)
-}
 train (t-iqzka84llmd04wmnow1jwp3l1) {
   utterance ("[g:doQuest] Start (night)[v:searchTerm] in the (forest)[v:searchTerm]")
   plan (Y+BkkCnISaxML8ovzUvRS8lL8U0sLkkt0svKLy3KS8zBIZuSH1iaWlzCIIdVNj0xNzW4JLEkFYd8cUliUYk7UBGDFFb5Qjxmp2XmpUDslsdudmpiUXJGSGpRLhUUcDAwMjAxMDOwMLAysDGwA/kMKCJsQB4DHPMAIQNQjhGiEgA=)

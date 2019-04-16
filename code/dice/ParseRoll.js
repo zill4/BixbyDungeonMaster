@@ -1,45 +1,33 @@
-// RollDice
-// Rolls a dice given a number of sides and a number of dice
+module.exports.function = function parseRoll (parseNumSides, modif) {
+  
+  var arr = parseNumSides.split('D');
+  numDice = arr[0] ? arr[0] : 1;
+  numSides = arr[1] ? arr[1] : 6;
 
-// Main entry point
-var console = require('console');
-module.exports.function = function parseRoll (parseNumSides) {
-  // Convert undefined to string.
-  var value = parseNumSides + "";
-  console.log(typeof parseNumSides);
-  
-  // We capture multiple numbers.
-  var re = /\d+/g;
-  var myArray = value.match(re);
-  // The first num of the array is the number of dice.
-  // The second num of the array is teh number of sides.
-  // If array is of size 1 the value is sides.
-  // If the array is greater than 2 the 3rd value is ignored. Till we implement multiple rolls.
-  var sides = 6;
-  var num = 1;
-  if (myArray.length == 1)
-    numSides = Number(myArray[0]);
-  
-  else if (myArray.length > 1)
-  {
-    numDice = Number(myArray[0]);
-    numSides = Number(myArray[1]);
-  }
-  
   var sum = 0;
-  var result = [];
+  var min = [];
+  var max = [];
 
   for (var i = 0; i < numDice; i++) {
-    var roll = Math.ceil(Math.random() * numSides);
-    result.push(roll);
-    sum += roll;
+    var higher = Math.ceil(Math.random() * numSides);
+    var lower = Math.ceil(Math.random() * numSides);
+    if (modif != null && higher < lower) {
+      [higher, lower] = [lower, higher];
+    }
+    max.push(higher);
+    min.push(lower);
+    if (modif == "disadvantage") {
+      sum += lower;
+    }
+    else {
+      sum += higher;
+    }
   }
-  // RollResult
   return {
-    sum: sum, // required Sum
-    roll: result // required list Roll
+    sum: sum,
+    max: max,
+    min: min,
+    modif: modif
   }
-  
-  
 }
 

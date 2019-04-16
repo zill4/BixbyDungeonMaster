@@ -29,4 +29,11 @@ structure (event) {
     min (Optional) max (One)
     visibility (Private)
   }
+  // Is this the last event in the chain?
+  // We will exit the updateGame loop on this if it is True.
+  property (finalEvent)
+  {
+    type(viv.core.Boolean)
+    min (Optional) max (One)
+   }
 }

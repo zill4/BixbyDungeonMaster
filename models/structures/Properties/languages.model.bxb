@@ -1,9 +1,9 @@
 structure (languages) {
   description (The language spoken by a given race in DnD 5e.)
   
-  property (languageInfo)
+  property (languageDescription)
   {
-    type(info)
+    type(languageDescription)
     min (Required) max (Many)
   }
   

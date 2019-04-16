@@ -22,7 +22,7 @@ structure (quest) {
 
   property (image)
   {
-    type(viv.core.Url)
+    type(image)
     description (The image that should represent this quest.)
     min (Required) max (One)
   }

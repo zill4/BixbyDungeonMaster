@@ -1,0 +1,5 @@
+train (t-t6vou2o2sdg5gon45e59tui2m) {
+  utterance ("[g:RollResultConcept] roll (5D20)[v:ParseNumSidesConcept] with (advantage)[v:ModifConcept]")
+  plan (Y2BhUCvISaxML8ovzUvRS8lL8U0sLkkt0gvKz8kJSi0uzSlxzs9LTi0oYVDCqi4gsag4FaTYJTM5lUERqxrf/JTMNJgxmriN8SvNDc5MSS2GKWVmYGRgApIMQBoEIQDEB4sCAA==)
+  last-modified (1555271223109)
+}

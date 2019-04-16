@@ -1,0 +1,5 @@
+train (t-pa77myng05amnhc8x7e72k6uw) {
+  utterance ([g:doQuest] Start The Tired Inn.)
+  plan (Y2BmkCnISaxML8ovzUvRS8lL8U0sLkkt0svKLy3KS8zBIZuSH1iaWlzCIIdVNj0xNzW4JLEklYGJgRGIGYAkIwMDjAYA)
+  last-modified (1555286413404)
+}

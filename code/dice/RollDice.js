@@ -1,21 +1,28 @@
-// RollDice
-// Rolls a dice given a number of sides and a number of dice
-
-// Main entry point
-module.exports.function = function rollDice(numDice, numSides) {
+module.exports.function = function rollDice(numDice, numSides, modif) {
 
   var sum = 0;
-  var result = [];
+  var min = [];
+  var max = [];
 
   for (var i = 0; i < numDice; i++) {
-    var roll = Math.ceil(Math.random() * numSides);
-    result.push(roll);
-    sum += roll;
+    var higher = Math.ceil(Math.random() * numSides);
+    var lower = Math.ceil(Math.random() * numSides);
+    if (modif != null && higher < lower) {
+      [higher, lower] = [lower, higher];
+    }
+    max.push(higher);
+    min.push(lower);
+    if (modif == "disadvantage") {
+      sum += lower;
+    }
+    else {
+      sum += higher;
+    }
   }
-
-  // RollResult
   return {
-    sum: sum, // required Sum
-    roll: result // required list Roll
+    sum: sum,
+    max: max,
+    min: min,
+    modif: modif
   }
 }

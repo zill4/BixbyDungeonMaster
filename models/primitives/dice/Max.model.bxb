@@ -1,0 +1,3 @@
+integer (MaxConcept) {
+  description (The higher result of a dice roll.)
+}

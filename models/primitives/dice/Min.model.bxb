@@ -1,0 +1,3 @@
+integer (MinConcept) {
+  description (The lower result of a dice roll.)
+}

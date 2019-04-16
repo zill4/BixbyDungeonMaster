@@ -1,0 +1,3 @@
+text (ModifConcept) {
+  description (A string representing the modification to a dice roll.)
+}

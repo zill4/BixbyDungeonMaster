@@ -147,7 +147,7 @@ module.exports = [{
         classUrl: "https://i.pinimg.com/originals/1c/c3/c5/1cc3c5e7c7af6adbe4293b0f59035641.jpg"
         },
         {
-        className: "Rouge",
+        className: "Rogue",
         classUrl: "https://i.pinimg.com/originals/57/ec/81/57ec815c6b9853a9708c4e91149e174e.jpg"
         },
         {
@@ -363,7 +363,7 @@ module.exports = [{
             classUrl: "https://i.pinimg.com/originals/8d/d9/46/8dd946e6de45ec0e7256368bea334328.jpg"
         },
         {
-            className: "Rouge",
+            className: "Rogue",
             classUrl: "https://66.media.tumblr.com/494152bc7f9d99c26c6321a3813ca492/tumblr_pay1g09el91wiy6abo1_1280.jpg"
         },
         {

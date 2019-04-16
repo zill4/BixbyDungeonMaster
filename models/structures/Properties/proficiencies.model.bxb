@@ -1,10 +1,23 @@
-structure  (proficiencies) {
+ structure  (proficiencies) {
   // For example Wisdom provides insight which boosts Detect lie, and lip reading.
   description (A list of skills with proficiency derived from a given ability.)
   
-  property (skills)
+  // property (skills)
+  // {
+  //   type(skill)
+  //   min (Required) max (Many)
+  // }
+  // Like Armor or Weapon
+  property (type)
   {
-    type(skill)
-    min (Required) max (Many)
+    type(type)
+    description (The type of profeciency)
   }
+  // Light Armor or scimitar
+  property (name)
+  {
+    type(proficiencyName)
+    description (The name of the given profeciency)
+  }
+  
 }

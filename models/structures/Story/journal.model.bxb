@@ -5,9 +5,10 @@ structure (journal) {
     min (Optional) max (Many)
   }
 // correct answer is odd with dnd, perhaps this can change to something less binary.
+  //UPDATED TO OPTIONAL
   property (correctAnswerCount) {
     type (correctAnswerCount)
-    min (Required) max (One)
+    min (Optional) max (One)
     description (How many correct answers so far?)
   }
 // 
@@ -16,8 +17,8 @@ structure (journal) {
     min (Required) max (One)
   }
 
-  property (questionsLeftCount) {
-    type (QuestionsLeftCount)
+  property (eventsLeftCount) {
+    type (eventsLeftCount)
     // min (Required) max (One)s
   }
 }

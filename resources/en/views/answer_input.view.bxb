@@ -14,15 +14,26 @@ input-view {
       }
     }
   }
-  render {
+
+  render{
     if (size(action.gameState.currentEvent.options) > 0) {
       selection-of (action.gameState.currentEvent.options) {
         where-each (option) {
           cell-card {
+            slot1{
+              image{
+                shape (Square)
+                url{
+                  template ("https://ksr-ugc.imgix.net/assets/024/133/176/5fa4648860b7bab90bdea5b446f70c6a_original.jpg?ixlib=rb-1.1.0&crop=faces&w=1552&h=873&fit=crop&v=1550525207&auto=format&frame=1&q=92&s=0ad8039fcc527f229904e45f2291000f")
+                }
+              }
+            }
             slot2 {
-              content {
+              content {  
                 primary {
-                  template ("[#{value(option.alias)}. ]#{value(option.text)}")
+                  // Here we are rendering our path options.s
+                  //template ("[#{value(option.alias)}. ]#{value(option.text)}")
+                  template ("#{value(option.text)}")
                 }
               }
             }
@@ -39,6 +50,7 @@ input-view {
         }
         on-submit {
           goal: answer
+          // Here we go through the updateGame and collect the users answer.
           value: viv.core.FormElement(answer)
         }
       }

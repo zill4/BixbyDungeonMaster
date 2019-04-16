@@ -3,9 +3,14 @@ structure (gameState) {
   features {
     transaction
   }
+  property (quest)
+  {
+    type(quest)
+    min (Required)
+  }
   property (player) {
     type (player)
-    min (Required) max (One)
+    min (Optional) max (One)
   }
   property (currentEvent) {
     type (event)

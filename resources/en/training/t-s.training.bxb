@@ -1,0 +1,5 @@
+train (t-s5v6rfij03fgv2cl28nsgfrop) {
+  utterance ("[g:RollResultConcept] roll (5)[v:NumDiceConcept] (12)[v:NumSidesConcept] sided dice with (advantage)[v:ModifConcept]")
+  plan (Y2BlUCvISaxML8ovzUvRS8lL8U0sLkkt0gvKz8kJSi0uzSlxzs9LTi0oYZDFqc4lMzmVQRGrtG9+SmYazARlrEr8SnNBBsAUqeBSFJyZkloMU8XCwMjAxMAMpBmALAiEAZAYVA4A)
+  last-modified (1555270987996)
+}

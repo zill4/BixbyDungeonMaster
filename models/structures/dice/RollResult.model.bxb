@@ -1,14 +1,26 @@
 structure (RollResultConcept) {
-  description (The result object produced by the RollDice action.)
+  description (The result object produced by the RollDisadvantage action.)
   property (sum) {
     type (SumConcept)
     min (Required)
     max (One)
   }
-  property (roll) {
-    description (The list of results for each dice roll.)
-    type (RollConcept)
+  property (max) {
+    description (The list of higher results for each dice roll.)
+    type (MaxConcept)
     min (Required)
     max (Many)
-  }      
+  }
+  property (min) {
+    description (The list of lower results for each dice roll.)
+    type (MinConcept)
+    min (Required)
+    max (Many)
+  }
+  property (modif) {
+    description (The dis/advantage tracker.)
+    type (ModifConcept)
+    min (Optional)
+    max (One)
+  }
 }

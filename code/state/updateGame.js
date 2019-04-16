@@ -16,23 +16,36 @@ exports.function = function(gameState, answer) {
 
   var journal = gameState.journal
   if (!gameState.completed) {
-    //update scoreBook
-    var entry = buildScore(gameState.currentEvent, answer)
+
+    var entry = buildEntry(gameState.currentEvent, answer)
+    // so we just checked if our answer was correct.
+    // Really we want to keep going until the total event chain is done.
+    // quest should be completed when we check if even == final event
+    // or if the player is dead. or in the future if the player wants to save and quit.
     if (entry.evaluation) {
       journal.correctAnswerCount += 1
     }
     journal.eventsAnsweredCount += 1
-    scoreBook.eventsLeftCount -= 1
+    journal.eventsLeftCount -= 1
     if (!journal.entries) {
       journal.entries = [entry]
     } else {
-      jounral.entries.push(entry)
+      journal.entries.push(entry)
     }
 
     //update state
     gameState.lastEntry = entry
     gameState.currentEvent.index += 1
-
+// This can probably be changed to if gameState.currentEvent.finalEvent?
+    // gameState.currentEvent = gameState.quest.events.options.answer
+    // if (gameState.currentEvent.finalEvent == false)
+    //   {
+    //     gameState.currentEvent = gameState.quest.events.option.event;
+    //   }
+    // else
+    //   {
+    //     gameState.completed = true;
+    //   }
     if (gameState.currentEvent.index < gameState.quest.events.length) {
       gameState.currentEvent = gameState.quest.events[gameState.currentEvent.index]
     } else {
@@ -42,7 +55,7 @@ exports.function = function(gameState, answer) {
   return gameState
 }
 
-function buildScore(currentEvent, answer) {
+function buildEntry(currentEvent, answer) {
   return {
     event: currentEvent,
     answer: unAliasedAnswer(currentEvent.options, answer),

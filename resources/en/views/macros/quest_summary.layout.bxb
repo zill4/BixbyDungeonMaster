@@ -10,15 +10,17 @@ layout-macro-def(quest-summary) {
     cell-card {
       slot1 {
         // Was quest.image.url
-        if (exists(quest.image)) {
+        if (exists(quest.image.url)) {
+          
           image {
             shape (Square)
             url {
-              // Was quest.image.url 
-              template ("#{value(quest.image)}")
+              // Was quest.image.
+              template ("#{value(quest.image.url)}")
             }
           }
         }
+        
       }
       slot2 {
         content {

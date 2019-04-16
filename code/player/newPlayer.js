@@ -13,9 +13,13 @@ module.exports.function = function newPlayer (raceName, className) {
   var raceSize;
   var raceAlignment;
   var raceAge;
+  var languageDescription;
+  var sizeDescription;
   var myUrl;
-  console.log(raceClass);
-  for (i = 0; i < races.results.length; i++) { 
+  var classURL;
+
+  for (i = 0; i < races.results.length; i++) 
+  { 
         if (races.results[i].name.toLowerCase() == raceName.toLowerCase())
           {
             console.log("Found the given race.");
@@ -24,17 +28,22 @@ module.exports.function = function newPlayer (raceName, className) {
             raceInfo = JSON.parse(http.getUrl(races.results[i].url));
           } 
   }
-  console.log("Made it to line 29")
-  if (validRace) {
+  if (validRace) 
+  {
     raceSpeed = raceInfo.speed;
     raceSize = raceInfo.size;
     raceAlignment = raceInfo.alignment;
     raceAge = raceInfo.age;
+    // added size_desc and lang_desc
+    sizeDescription = raceInfo.size_description;
+    languageDescription = raceInfo.language_desc;
   }
     for (i = 0; i < classes.results.length; i++) { 
         if (classes.results[i].name.toLowerCase() == className.toLowerCase())
          {
             validClass = true;
+           // Save the url for the given class to get info.
+             classURL = classes.results[i].url;
             console.log("Found the given class.");  
          } 
   }
@@ -55,6 +64,17 @@ module.exports.function = function newPlayer (raceName, className) {
               }
       }
   }
+  // If we see that the given class is true, we can make a http request to populate the class data.
+  var classInfo;
+  var proficiencies;
+  if (x == true)
+  {
+    // 1. Get class information by searching for class URL
+    classInfo = JSON.parse(http.getUrl(classURL));
+    // 2. Call a function to load listed objects like proficienies
+    proficiencies = loadProficiencies(classInfo);
+  }
+  
   var player;
   player = {
     currentLevel: 1,
@@ -66,13 +86,40 @@ module.exports.function = function newPlayer (raceName, className) {
       speed: raceSpeed,
       size: raceSize,
       alignment: raceAlignment,
-      age: raceAge
+      age: raceAge,
+      // FROM HERE IS NEW
+      // With class profiecieny we can check a recommended class/race combo.
+      sizeDescription: sizeDescription,
+      // need to add languages array
+      languageDescription: languageDescription,
+      // need to add traits + proficencies array
     },
     class: {
-      name: className
+      name: className,
+      hitDie: classInfo.hit_die,
+      proficiencies: proficiencies
     },
     image: myUrl
   }
   return player;
   }
-  
+// Here we load the list of proficiencies for the given class.
+// i.e. Axes, Swords, Light or Heavy Armor
+// Each proficiencey will have a name and type. 
+// i.e. Axe = weapon and light armor = armor
+ function loadProficiencies(classInfo)
+{
+  var proficiencies = new Array(classInfo.proficiencies.length);
+  var i = 0;
+  var profInfo;
+  console.log(classInfo.proficiencies);
+  for (i = 0; i < classInfo.proficiencies.length; i++)
+  {
+    console.log("Where is my issue? " + i)
+    profInfo = JSON.parse(http.getUrl(classInfo.proficiencies[i].url));
+    console.log("Here?  " + i)
+    proficiencies[i].name = profInfo.name;
+    proficiencies[i].type = profInfo.type;
+  }
+  return proficiencies;
+}
