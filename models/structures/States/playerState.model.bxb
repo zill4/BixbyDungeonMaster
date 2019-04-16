@@ -1,0 +1,12 @@
+structure (playerState) {
+  description (The current state of the Player in the game.)
+  property (player) {
+    type (player)
+    min (Optional) max (One)
+  }
+  property (location){
+    type(location)
+    min (Required) max (One)
+  }
+  
+}

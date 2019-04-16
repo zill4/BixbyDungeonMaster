@@ -1,0 +1,3 @@
+text (skillDescription) {
+  description (The description of the skill.)
+}

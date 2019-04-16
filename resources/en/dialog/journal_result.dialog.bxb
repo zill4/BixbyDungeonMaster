@@ -1,0 +1,11 @@
+dialog (Result) {
+  match: journal(journal) {
+    from-output: doQuest (action)
+  }
+
+  if (exists(action.gameState.lastEntry)) {
+    template ("#{macro('entry-statement', action.gameState.lastEntry)} #{macro('journal-statement', journal)} #{macro('quest-completion-statement')} ") {
+      speech ("#{macro('entry-statement', action.gameState.lastEntry)} #{macro('journal-statement', journal)} ...... #{macro('quest-completion-statement')} ")
+    }
+  }
+}

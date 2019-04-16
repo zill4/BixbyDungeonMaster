@@ -1,0 +1,17 @@
+action (startGame) {
+  description (Starts a game and initialize game state.)
+  type (BeginTransaction)
+  collect {
+    input (quest) {
+      type (quest)
+      min (Required) max (One)
+      default-init {
+        intent {
+          goal: findQuest
+        }
+      }
+    }
+  }
+  
+  output (gameState)
+}

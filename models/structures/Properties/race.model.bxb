@@ -1,0 +1,48 @@
+structure (race) {
+  description (DnD 5e Race.)
+  property (name) {
+    min (Required)
+    type (raceName)
+  }
+  property (speed) {
+    min (Required)
+    type (raceSpeed)
+  }
+  property (alignment) {
+    type (raceAlignment)
+    min (Required)
+  }
+  property (age) {
+    min (Required)
+    type (raceAge)
+  }
+  property (size) {
+    min (Required)
+    type (raceSize)
+  }
+    property (sizeDescription) {
+    type (raceSizeDesciption)
+    min (Optional)
+  }
+  property (languages) {
+    type (languages)
+    min (Optional)
+    max (Many)
+  }
+  property (Proficiencies) {
+    type (proficiencies)
+    min (Optional)
+    max (Many)
+  }
+  property (traits)
+  {
+    type (raceTraits)
+    min (Optional)
+    max (Many)
+  }
+  // Not sure if I want to add the image to the class.
+  // property (images) {
+  //   type (Image)
+  //   max (Many)
+  // }
+}

@@ -1,0 +1,29 @@
+ result-view {
+   match {
+     RollResultConcept (rollResult)
+   }
+   render {
+     layout {
+       section {
+         content {
+           single-line {
+             text {
+               style (Detail_M)
+               value ("Sum: #{value(rollResult.sum)}")
+             }
+           }
+           single-line {
+             text {
+               style (Detail_M)
+               value ("Rolls: #{value(rollResult.roll)}")
+             }
+           }
+          image {
+            aspect-ratio (1:1)
+            url ("https://cdn.filestackcontent.com/fG8Ct8L4REGWPZX0mOa3")
+          }
+         }
+       }
+     }
+   }
+ }

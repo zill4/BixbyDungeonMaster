@@ -1,0 +1,74 @@
+structure  (monster) {
+  description (__DESCRIPTION__)
+  
+  // The AC or armor of a player.
+  property (armor){
+   type (armor)
+    min (Required) max (One)
+  }
+  // The total health of a player.
+  property (health){
+    type (health)
+    min (Required) max (One)
+  }
+  // The current health of a player.
+  property(currentHealth)
+  {
+    type(currentHealth)
+    min (Required) max (One)
+  }
+  // The conditions of a player.
+  property (conditions)
+  {
+    type (conditions)
+    min (Optional) max (Many)
+  }
+  // The Equipment held by a player. (many)
+  property (equipment)
+  {
+    type (equipment)
+    min(Required) max (Many)
+  }
+  // The Class of a player.
+  property (class)
+  {
+    type (classes)
+    min (Required) max (One)
+  }
+  // The Race of a player.
+  property (race)
+  {
+    type (race)
+    min (Required) max (One)
+  }
+  // The Proficiencies of a player.
+  property (proficiencies)
+  {
+    type (proficiencies)
+    min (Required) max (Many)
+  }
+  // The Ability scores of a player.
+  property (abilityScore)
+  {
+    type (abilityScores)
+    min (Required) max (Many)
+  }
+  // The Skills of a player.
+  property (skills)
+  {
+    type (skill)
+    min (Required) max (Many)
+  }
+  // The Languages of a player.
+  property (languages)
+  {
+    type (languages)
+    min (Required) max (Many)
+  }
+  // The current action of a player.
+  property (currentAction)
+  {
+    type(actions)
+    min (Required) max (One)
+  }
+}

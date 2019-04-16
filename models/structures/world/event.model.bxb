@@ -1,0 +1,32 @@
+structure (event) {
+  property (textToDisplay) {
+    description(Question to be displayed)
+    type (viv.core.Text)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (textToSpeak) {
+    description(Event formatted for speech channel)
+    type (viv.core.Text)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (options) {
+    description(Options provided to the user)
+    type (option)
+    min (Optional) max (Many)
+    visibility (Private)
+  }
+  property (correctAnswer) {
+    description(Information on the correct answer)
+    type (correctAnswer)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (index) {
+    description (The index of the event in the quest)
+    type (viv.core.Integer)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+}

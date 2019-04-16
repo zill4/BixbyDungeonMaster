@@ -1,0 +1,6 @@
+dialog (NoResult) {
+  match: quest {
+    from-output: findQuest(find)
+  }
+  template("#{macro('quest-not-found-statement',find.searchTerm)}")
+}

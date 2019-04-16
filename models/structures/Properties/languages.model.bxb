@@ -1,0 +1,15 @@
+structure (languages) {
+  description (The language spoken by a given race in DnD 5e.)
+  
+  property (languageInfo)
+  {
+    type(info)
+    min (Required) max (Many)
+  }
+  
+  property (typicalSpeakers)
+  {
+    type (typicalSpeaker)
+    min (Required) max (Many)
+  }
+}

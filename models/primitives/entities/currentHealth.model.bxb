@@ -1,0 +1,4 @@
+integer  (currentHealth) {
+  description (The current health of a entity in dnd 5e.)
+  
+}

@@ -1,0 +1,4 @@
+name (className) {
+  // For example 'Warlock' is a class name.
+  description (The name of a given class in DnD 5e.)
+}

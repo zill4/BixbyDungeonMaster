@@ -1,0 +1,8 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (findRace) {
+      accepted-inputs (raceName)
+      local-endpoint ("races/FindRaces.js")
+    }
+  }
+}

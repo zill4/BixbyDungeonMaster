@@ -1,0 +1,12 @@
+action (findRace) {
+  description (Given the name of a DnD 5e race return information on that race.)
+  type (Search)
+  collect {
+    input (raceName) {
+      type (raceName)
+      min (Required)
+      max (One)
+    }
+  }
+  output (race)
+}

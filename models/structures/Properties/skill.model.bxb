@@ -1,0 +1,20 @@
+structure (skill) {
+  description (A skill derived from a given ability.)
+
+  property (skillName)
+  {
+    type(skillName)
+    max (One) min (Required)
+  }
+  property (skillDescription)
+  {
+    type(skillDescription)
+    max (One) min (Required)
+  }
+  
+  property (abilityType)
+  {
+    type(abilityName)
+    max (One) min (Required)
+  }
+}

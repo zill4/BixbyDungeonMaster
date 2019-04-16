@@ -1,0 +1,3 @@
+integer (armor) {
+  description (The current AC or armor of an entity in DnD 5e.)
+}

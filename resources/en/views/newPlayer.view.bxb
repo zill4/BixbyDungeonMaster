@@ -1,0 +1,29 @@
+ result-view {
+   match {
+     player (player)
+   }
+   render {
+     layout {
+       section {
+         content {
+           single-line {
+             text {
+               style (Detail_M)
+              value ("Race: #{value(player.race)}")
+             }
+           }
+           single-line {
+             text {
+               style (Detail_M)
+              value ("Class: #{value(player.class)}")
+             }
+           }
+          image {
+            aspect-ratio (3:4)
+            url ("${value(player.image)}")
+          }
+         }
+       }
+     }
+   }
+ }

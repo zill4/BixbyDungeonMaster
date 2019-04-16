@@ -1,0 +1,53 @@
+input-view {
+  match {
+    quest(quests)
+  }
+  
+  
+  render {
+    
+    if ($handsFree) {
+      selection-of (quests) {
+        navigation-mode {        
+          read-one {            
+            list-summary {
+              template ("#{macro('QUEST_LIST_SUMMARY', quests)}")
+            }
+            item-selection-question {
+              choose (Random) {
+                template-macro (QUEST_SELECTION_EVENT_1)
+                template-macro (QUEST_SELECTION_EVENT_2)
+              }
+            }
+            overflow-statement {
+              template-macro (RESULT_OVERFLOW_STATEMENT)
+            }
+            underflow-statement {
+              template-macro (RESULT_UNDERFLOW_STATEMENT)
+            }
+          }
+        }
+
+        where-each-page (page) {
+          summary {
+            template("#{macro('quest-summary-statement', page[0])}")
+          }
+
+          where-each-item (quest) {
+            layout-macro (quest-details) {
+              param (quest) { expression (quest) }
+            }
+          }
+        }
+      }
+    } else {
+      selection-of (quests) {
+        where-each (quest) {
+          layout-macro (quest-summary) {
+            param (quest) { expression (quest) }
+          }
+        }
+      }
+    }
+  }
+}

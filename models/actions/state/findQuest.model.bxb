@@ -1,0 +1,12 @@
+action (findQuest) {
+  description (Finds a quest)
+  type (Search)
+  collect {
+    input (searchTerm) {
+      type (searchTerm)
+      min (Optional) max (One)
+      description (Try to find a specific quest)
+    }
+  }
+  output (quest)
+}

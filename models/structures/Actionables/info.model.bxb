@@ -1,0 +1,13 @@
+structure (info) {
+  description (The information of a given object.)
+  property (infoName)
+  {
+    type (infoName)
+    min (Required) max (One)
+  }
+  property (infoText)
+  {
+    type (infoText)
+    min (Required) max (One)
+  }
+}

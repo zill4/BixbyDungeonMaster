@@ -1,0 +1,28 @@
+layout-macro-def(quest-details) {
+  params {
+    param (quest) {
+      type (quest)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    image-card {
+      title-area {
+        slot1 {
+          text ("#{value(quest.title)}")
+        }
+        slot2 {
+          single-line {
+            text ("#{number(size(quest.events))} quests")
+          }
+        }
+      }
+      image-url {
+        // was quest.image.url
+        template ("[#{value(quest.image)}]")
+      }
+    }
+  }
+
+}

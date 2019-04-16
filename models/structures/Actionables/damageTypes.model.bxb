@@ -1,0 +1,4 @@
+structure (damageTypes) {
+  description (__DESCRIPTION__)
+
+}

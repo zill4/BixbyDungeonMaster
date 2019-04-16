@@ -1,0 +1,13 @@
+dialog (Concept) {
+  match {
+    quest (this)
+  }
+  switch (plural(this)) {
+    case (One) {
+      template (quest)
+    }
+    default {
+      template (quests)
+    }
+  }
+}

@@ -1,0 +1,9 @@
+dialog (Result) {
+  match: quest(quest)
+  //first dialog - asking user if the user is ready for the first question
+  if (size(quest)==1) {
+    template ("#{macro('quest-summary-statement', quest)}")
+  } else {
+    template ("I found #{size(quest)} #{concept(quest)}")
+  }
+}

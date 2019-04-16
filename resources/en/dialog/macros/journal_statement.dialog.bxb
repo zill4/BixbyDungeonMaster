@@ -1,0 +1,12 @@
+template-macro-def (journal-statement) {
+  params {
+    param (journal) {
+      type (journal)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    template("#{number(journal.correctAnswerCount)} out of #{number(journal.eventsAnsweredCount)}!")
+  }
+}

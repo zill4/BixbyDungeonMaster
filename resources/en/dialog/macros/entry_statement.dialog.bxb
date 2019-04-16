@@ -1,0 +1,16 @@
+template-macro-def (entry-statement) {
+  params {
+    param (entry) {
+      type (entry)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    if (entry.evaluation) {
+      template ("Correct!")
+    } else {
+      template ("Incorrect!")
+    }
+  }
+}

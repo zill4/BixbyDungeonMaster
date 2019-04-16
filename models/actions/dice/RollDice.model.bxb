@@ -1,0 +1,55 @@
+   action (RollDice) {
+     type (Calculation)
+     collect {
+       input (numDice) {
+         type (NumDiceConcept)
+         min (Required)
+         max (One)
+         default-init {
+           intent {
+             goal { NumDiceConcept }
+             value {
+               NumDiceConcept (2)
+             }
+           }
+         }
+         // add a validation dialog prompt when the user indicates less
+         // than 1 dice.
+         validate {
+           if (numDice < 1) {
+             prompt {
+               dialog {
+                 template ("You must have at least one dice.")              
+               }
+             }                                          
+           }      
+         }
+       }
+       input (numSides) {
+         type (NumSidesConcept)
+         min (Required)
+         max (One)
+
+         default-init {
+           intent{
+             goal { NumSidesConcept }
+             value {
+               NumSidesConcept (6)
+             }
+           }
+         }
+         // add a validation dialog prompt when the user indicates less
+         // than 2 sides.
+         validate {
+           if (numSides < 2) {
+             prompt {
+               dialog {
+                 template ("A dice must have at least 2 sides.")              
+               }
+             }
+           }                                      
+         }
+       }  
+     }
+     output (RollResultConcept)
+   }

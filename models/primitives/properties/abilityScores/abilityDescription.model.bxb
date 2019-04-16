@@ -1,0 +1,4 @@
+text (abilityDescription) {
+  // The description of a given ability such as charisma.
+  description (The description of a given ability.)
+}

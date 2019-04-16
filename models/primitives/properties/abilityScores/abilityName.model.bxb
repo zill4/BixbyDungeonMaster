@@ -1,0 +1,4 @@
+name (abilityName) {
+  // For example Charisma
+  description (The name of an ability score.)
+}

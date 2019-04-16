@@ -1,0 +1,19 @@
+template-macro-def (advance-quest-event) {
+  params {
+    param (eventsLeft) {
+      type (viv.core.Integer)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    if (eventsLeft == 0) {
+      template ("Do you want to see how you did?")
+    } else-if (eventsLeft == 1) {
+      template ("Do you want to answer the last question?")
+    } else {
+      template ("Do you want to answer the next question?")
+
+    }
+  }
+}

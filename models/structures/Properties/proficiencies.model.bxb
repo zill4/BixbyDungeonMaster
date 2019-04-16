@@ -1,0 +1,10 @@
+structure  (proficiencies) {
+  // For example Wisdom provides insight which boosts Detect lie, and lip reading.
+  description (A list of skills with proficiency derived from a given ability.)
+  
+  property (skills)
+  {
+    type(skill)
+    min (Required) max (Many)
+  }
+}

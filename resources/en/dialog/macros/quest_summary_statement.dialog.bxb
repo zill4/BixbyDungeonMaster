@@ -1,0 +1,16 @@
+template-macro-def (quest-summary-statement) {
+  params {
+    param (quest) {
+      type (quest)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    if (size(quest.events) == 1) {
+      template ("#{value(quest.title)} has one quest.")
+    } else {
+        template ("#{value(quest.title)} has #{size(quest.events)} events.")
+    }
+  }
+}

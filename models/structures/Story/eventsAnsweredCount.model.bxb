@@ -1,0 +1,4 @@
+integer  (eventsAnsweredCount) {
+  // This does not make much sense yet but it will.
+  description(How many events answered so far)
+}

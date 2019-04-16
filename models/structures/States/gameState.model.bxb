@@ -1,0 +1,39 @@
+structure (gameState) {
+  description (Holds the game state.)
+  features {
+    transaction
+  }
+  property (player) {
+    type (player)
+    min (Required) max (One)
+  }
+  property (currentEvent) {
+    type (event)
+    min (Required) max (One)
+    description(Event of current state)
+  }
+// Inside a game like DnD score would be your progress 
+  property (lastEntry) {
+    type (entry)
+    min (Optional) max (One)
+    description(User's last score)
+  }
+  property (started)
+  {
+    type (viv.core.Boolean)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+  property (completed)
+  {
+    type (viv.core.Boolean)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+// as a replacement for the scoreBook
+  property (journal) 
+  {
+    type (journal)
+    min (Optional) max (One)
+  }
+}

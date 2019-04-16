@@ -1,0 +1,32 @@
+endpoints {
+   action-endpoints {
+     action-endpoint (RollDice) {
+       accepted-inputs (numDice, numSides)
+       local-endpoint ("dice/RollDice.js")
+      }
+      action-endpoint (ParseRollDice) {
+      accepted-inputs (parseNumSides)
+      local-endpoint ("dice/ParseRoll.js")
+    }
+    action-endpoint (findQuest) {
+      accepted-inputs (searchTerm)
+      local-endpoint ("state/findQuest.js")
+    }
+    action-endpoint (startGame) {
+      accepted-inputs (quest)
+      local-endpoint ("state/startGame.js")
+    }
+    action-endpoint (updateGame) {
+      accepted-inputs (gameState, answer)
+      local-endpoint ("state/updateGame.js")
+    }
+    action-endpoint (doQuest) {
+      accepted-inputs (gameState)
+      local-endpoint ("state/doQuest.js")
+    }
+    action-endpoint (constructAnswerFromOption) {
+      accepted-inputs (option)
+      local-endpoint ("state/constructAnswerFromOption.js")
+    }
+  }
+}

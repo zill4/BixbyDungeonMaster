@@ -1,0 +1,23 @@
+structure  (location) {
+  description (A location somewhere in the world of DnD 5e.)
+  // Example
+  // Name : Elywn Forest
+  // Description: The forest outside of Stormwind City in Azeroth.
+  // URL: <IMG of given location>
+  property (locationName)
+  {
+    type(locationName)
+    min (Required) max (One)
+  }
+  property (locationDescription)
+  {
+    type (locationDescription)
+    min (Required) max (One)
+  }
+  property (locationURL)
+  {
+    description (The image of the given location.)
+    type (viv.core.Url)
+    min (Optional) max (One)
+  }
+}

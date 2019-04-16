@@ -1,0 +1,37 @@
+layout-macro-def(quest-summary) {
+  params {
+    param (quest) {
+      type (quest)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    cell-card {
+      slot1 {
+        // Was quest.image.url
+        if (exists(quest.image)) {
+          image {
+            shape (Square)
+            url {
+              // Was quest.image.url 
+              template ("#{value(quest.image)}")
+            }
+          }
+        }
+      }
+      slot2 {
+        content {
+          primary {
+            template ("#{value(quest.title)}")
+          }
+          secondary {
+            template ("#{number(size(quest.events))} events")
+          }
+        }
+      }
+    }
+
+  }
+
+}

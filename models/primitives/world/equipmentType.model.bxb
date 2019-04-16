@@ -1,0 +1,3 @@
+text (equipmentType) {
+  description (The type of a given piece of equipment.)
+}

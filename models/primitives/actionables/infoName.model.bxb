@@ -1,0 +1,3 @@
+name (infoName) {
+  description (The name of the given infographic.)
+}

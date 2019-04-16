@@ -1,0 +1,117 @@
+structure (classes) {
+  description (A given class that an entity can belong to in DnD 5e.)
+  property (name)
+  {
+    type(className)
+    min (Required) max (One)
+  }
+  // The dice roll bonus to hit.
+  property (hitDie)
+  {
+    type (hitDie)
+    min (Optional) max (One)
+  }
+  // Such as Arcana, Deception, History / Choose 2 skills / Take light armor and simple weapon if warlock
+  property (proficiencies)
+  {
+    type (proficiencies)
+    min (Optional) max (Many)
+  }
+ 
+  property (savingThrows)
+  {
+    type (abilityScores)
+    min (Optional) max (Many)
+  }
+  
+  property (spellcasting)
+  {
+    type (spellcasting)
+    min (Optional) max (One)
+  }
+  // api/classes/{ class name}/level/{int 1 - 20}
+  property (levels)
+  { 
+    type (levels)
+    min (Optional) max (Many)
+  }
+}
+// "index": 11,
+// 		"name": "Warlock",
+// 		"hit_die": 8,
+// 		"proficiency_choices": [
+// 			{
+// 				"choose": 2,
+// 				"type": "proficiencies",
+// 				"from": [
+// 					{
+// 						"url": "http://www.dnd5eapi.co/api/proficiencies/107",
+// 						"name": "Skill: Arcana"
+// 					},
+// 					{
+// 						"url": "http://www.dnd5eapi.co/api/proficiencies/109",
+// 						"name": "Skill: Deception"
+// 					},
+// 					{
+// 						"url": "http://www.dnd5eapi.co/api/proficiencies/110",
+// 						"name": "Skill: History"
+// 					},
+// 					{
+// 						"url": "http://www.dnd5eapi.co/api/proficiencies/112",
+// 						"name": "Skill: Intimidation"
+// 					},
+// 					{
+// 						"url": "http://www.dnd5eapi.co/api/proficiencies/113",
+// 						"name": "Skill: Investigation"
+// 					},
+// 					{
+// 						"url": "http://www.dnd5eapi.co/api/proficiencies/115",
+// 						"name": "Skill: Nature"
+// 					},
+// 					{
+// 						"url": "http://www.dnd5eapi.co/api/proficiencies/119",
+// 						"name": "Skill: Religion"
+// 					}
+// 				]
+// 			}
+// 		],
+// 		"proficiencies": [
+// 			{
+// 				"name": "Light armor",
+// 				"url": "http://www.dnd5eapi.co/api/proficiencies/1"
+// 			},
+// 			{
+// 				"name": "Simple weapons",
+// 				"url": "http://www.dnd5eapi.co/api/proficiencies/19"
+// 			}
+// 		],
+// 		"saving_throws": [
+// 			{
+// 				"name": "WIS",
+// 				"url": "http://www.dnd5eapi.co/api/ability-scores/5"
+// 			},
+// 			{
+// 				"name": "CHA",
+// 				"url": "http://www.dnd5eapi.co/api/ability-scores/6"
+// 			}
+// 		],
+// 		"starting_equipment": {
+// 			"url": "http://www.dnd5eapi.co/api/startingequipment/11",
+// 			"class": "Warlock"
+// 		},
+// 		"class_levels": {
+// 			"url": "http://www.dnd5eapi.co/api/classes/warlock/levels",
+// 			"class": "Warlock"
+// 		},
+// 		"subclasses": [
+// 			{
+// 				"url": "http://www.dnd5eapi.co/api/subclasses/11",
+// 				"name": "Fiend"
+// 			}
+// 		],
+// 		"spellcasting": {
+// 			"url": "http://www.dnd5eapi.co/api/spellcasting/7",
+// 			"class": "Warlock"
+// 		},
+// 		"url": "http://www.dnd5eapi.co/api/classes/11"
+// 	}

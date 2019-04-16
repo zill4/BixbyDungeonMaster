@@ -1,0 +1,8 @@
+ dialog (Concept) {
+   match {
+     // Look for this type
+     NumSidesConcept
+   }
+   // Use the following template text with this type
+   template("number of sides")
+ }

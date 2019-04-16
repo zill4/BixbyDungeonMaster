@@ -1,0 +1,4 @@
+structure (levels) {
+  description (For a given class, levels are the skills obtained per leveling up.)
+
+}

@@ -1,0 +1,23 @@
+structure (journal) {
+// A journal is essentially a series of entries from the quest.
+  property (entries) {
+    type (entry)
+    min (Optional) max (Many)
+  }
+// correct answer is odd with dnd, perhaps this can change to something less binary.
+  property (correctAnswerCount) {
+    type (correctAnswerCount)
+    min (Required) max (One)
+    description (How many correct answers so far?)
+  }
+// 
+  property (eventsAnsweredCount) {
+    type (eventsAnsweredCount)
+    min (Required) max (One)
+  }
+
+  property (questionsLeftCount) {
+    type (QuestionsLeftCount)
+    // min (Required) max (One)s
+  }
+}

@@ -1,0 +1,4 @@
+dialog (Selection) {
+  match: quest
+  template ("Which quest do you want to take?")
+}

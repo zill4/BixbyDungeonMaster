@@ -1,0 +1,3 @@
+integer (health) {
+  description (The maximum health of an entity in dnd 5e.)
+}

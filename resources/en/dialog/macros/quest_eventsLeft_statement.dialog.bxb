@@ -1,0 +1,16 @@
+template-macro-def (quest-events-left-statement) {
+  params {
+    param (eventsLeft) {
+      type (viv.core.Integer)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    if (eventsLeft == 1) {
+        template ("There is one event left.")
+    } else {
+        template ("There are #{number(eventsLeft)} events left.")      
+    }
+  }
+}

@@ -1,0 +1,24 @@
+action (newPlayer) {
+  type (Constructor)
+  description (Create a player for a small session.)
+  collect {
+    // The name of the players race
+    input (raceName) {
+      type (raceName)
+      min (Required) max (One)
+    }
+    // The name of the players class 
+    input (className)
+    {
+      type(className)
+      min (Required) max (One)
+    }
+    // optionally we may require a name. Perhaps add a prompt for that...
+    input (playerName)
+    {
+      type(playerName)
+      min (Optional) max (One)
+    }
+  }
+  output (player)
+}

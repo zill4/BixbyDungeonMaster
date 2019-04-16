@@ -1,0 +1,3 @@
+integer (correctAnswerCount) {
+  description (How many correct answers so far?)
+}

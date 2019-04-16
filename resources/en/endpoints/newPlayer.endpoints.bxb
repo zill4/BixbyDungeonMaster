@@ -1,0 +1,8 @@
+endpoints {
+   action-endpoints {
+    action-endpoint (newPlayer) {
+      accepted-inputs (raceName, className)
+      local-endpoint ("player/newPlayer.js")
+    }
+  }
+}

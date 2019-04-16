@@ -1,0 +1,3 @@
+name (equipmentName) {
+  description (The name of a given piece of equipment.)
+}

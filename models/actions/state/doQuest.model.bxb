@@ -1,0 +1,25 @@
+action (doQuest) {
+  description (Keep prompting the user for answers until game is completed.)
+  type (Commit)
+  collect {
+    input (gameState) {
+      type (gameState)
+      min (Required) max (One)
+      default-init {
+        intent {
+          goal: startGame
+        }
+      }
+      validate {
+        if (!gameState.completed) {
+          replan {
+            intent {
+              goal: updateGame
+            }
+          }
+        }
+      }
+    }
+  }
+  output (journal)
+}

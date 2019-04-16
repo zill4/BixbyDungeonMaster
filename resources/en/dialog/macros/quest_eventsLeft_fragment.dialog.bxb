@@ -1,0 +1,18 @@
+template-macro-def (quiz-events-left-fragment) {
+  params {
+    param (eventsLeft) {
+      type (viv.core.Integer)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    if (eventsLeft == 0) {
+      template ("No more events left")
+    } else-if (eventsLeft == 1) {
+        template ("One event left")
+    } else {
+        template ("#{number(eventsLeft)} events left")      
+    }
+  }
+}

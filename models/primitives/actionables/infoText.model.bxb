@@ -1,0 +1,3 @@
+text (infoText) {
+  description (The given description of the infographic.)
+}

@@ -1,0 +1,12 @@
+template-macro-def (quest-not-found-statement) {
+  params {
+    param (searchTerm) {
+      type (searchTerm)
+      min (Optional)
+      max (One)
+    }
+  }
+  content {
+    template("I didn't find any quest[ matching #{value(searchTerm)}].")
+  }
+}

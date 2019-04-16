@@ -1,0 +1,76 @@
+layout-macro-def(journal) {
+  params {
+    param (journal) {
+      type (journal)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    section {
+      content {
+        title-area {
+          slot1 {
+            text {
+              style(Title_M)
+              value("Question Review:")
+            }
+          }
+        }
+        for-each (journal.entries) {
+          as (entry) {
+            paragraph {
+              style (Title_S)
+              value ("Event: #{value(entry.event.textToDisplay)}")
+            }
+            cell-area {
+              slot1 {
+                image {
+                  shape (Circle)
+                  url {
+                    if (entry.evaluation == true) {
+                      // If you get something good, level up image
+                      template ("https://images.pond5.com/retro-videogame-level-text-computer-footage-083824327_iconl.jpeg")
+                    } else {
+                      // something bad is dark souls you died
+                      template ("https://i.ytimg.com/vi/-ZGlaAxB7nI/maxresdefault.jpg")
+                    }
+                  }
+                }
+              }
+              slot2 {
+                content {
+                  order (PrimarySecondary)
+                  primary {
+                    if (exists(entry.expectedAnswer)) {
+                      if (entry.evaluation == false) {
+                        template ("'#{value(entry.answer)}'")
+                      } else {
+                        template ("'#{value(entry.expectedAnswer)}'")
+                      }
+                    } 
+                  }
+                }
+              }
+            }
+            if (entry.evaluation == false) {
+              paragraph {
+                style (Detail_L)
+                value {
+                  template ("Correct answer: '#{value(entry.expectedAnswer)}'[ - #{value(entry.event.correctAnswer.explanation)}]")
+                }
+              }
+            }
+            paragraph {
+              value {
+                template ("")
+              }
+            }
+            divider
+          }
+        }
+      }
+    }
+  }
+}
+

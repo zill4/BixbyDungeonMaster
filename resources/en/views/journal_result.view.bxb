@@ -1,0 +1,19 @@
+result-view {
+  match {
+    journal(journal)
+  }
+
+  render {
+    layout-macro ("journal") {
+      param(journal) {
+        expression (journal)
+      }
+    }
+  }
+
+  conversation-drivers {
+    conversation-driver {
+      template ("Start another quest")
+    }
+  }
+}

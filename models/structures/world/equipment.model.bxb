@@ -1,0 +1,15 @@
+structure  (equipment) {
+  description (Object within the world.)
+   // name
+  property (equipmentName)
+  {
+    type(equipmentName)
+    min (Required) max (One)
+  }
+  // weapon,armor, junk, vehicle
+  property (equipmentType)
+  {
+    type(equipmentType)
+    min (Required) max (One)
+  }
+}

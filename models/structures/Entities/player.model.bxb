@@ -1,0 +1,92 @@
+structure  (player)
+  {
+  description (The player entity.)
+  
+  property (playerName)
+  {
+    type(playerName)
+    min (Optional) max (One)
+  }
+  property (currentLevel)
+  {
+    type(currentLevel)
+    min (Required) max (One)
+  }
+  // The AC or armor of a player.
+  property (armor)
+  {
+   type (armor)
+    min (Required) max (One)
+  }
+  // The total health of a player.
+  property (health)
+  {
+    type (health)
+    min (Required) max (One)
+  }
+  // The current health of a player.
+  property(currentHealth)
+  {
+    type(currentHealth)
+    min (Required) max (One)
+  }
+  // The conditions of a player.
+  property (conditions)
+  {
+    type (conditions)
+    min (Optional) max (Many)
+  }
+  // The Equipment held by a player. (many)
+  property (equipment)
+  {
+    type (equipment)
+    min(Optional) max (Many)
+  }
+  // The Class of a player.
+  property (class)
+  {
+    type (classes)
+    min (Required) max (One)
+  }
+  // The Race of a player.
+  property (race)
+  {
+    type (race)
+    min (Required) max (One)
+  }
+  // The Proficiencies of a player.
+  property (proficiencies)
+  {
+    type (proficiencies)
+    min (Optional) max (Many)
+  }
+  // The Ability scores of a player.
+  property (abilityScore)
+  {
+    type (abilityScores)
+    min (Optional) max (Many)
+  }
+  // The Skills of a player.
+  property (skills)
+  {
+    type (skill)
+    min (Optional) max (Many)
+  }
+  // The Languages of a player.
+  property (languages)
+  {
+    type (languages)
+    min (Optional) max (Many)
+  }
+  // The current action of a player.
+  property (currentAction)
+  {
+    type(actions)
+    min (Optional) max (One)
+  }
+  property (image)
+  {
+    type(viv.core.Url)
+    min (Required) max (One)
+  }
+}

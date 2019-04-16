@@ -1,0 +1,33 @@
+structure (entry) {
+  // based off score, can be modified to keep track of event details. description
+  // Maybe loot picked up, monster slain, or action taken?
+  description (current response to user's answer)
+
+  property (event) {
+    type (event)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  
+  property (answer) {
+    type (answer)
+    description (user's answer)
+    min (Required) max (One)
+    visibility (Private)
+  }
+
+  property (expectedAnswer) {
+    type (answer)
+    description (expected answer)
+    min (Required) max (One)
+    visibility (Private)
+  }
+
+  property (evaluation) {
+    type (viv.core.Boolean)
+    description (correct if true, incorrect if false)
+    min (Required) max (One)
+    visibility (Private)
+  }
+
+}

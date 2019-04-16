@@ -1,0 +1,6 @@
+integer (hitDie) {
+  // Player casts spell as warlock with eldritch blast
+  // Warlock's spells have a hit die of +8
+  // roll 1D20 + hit die 
+  description (The dice roll modifier for hitting something.)
+}

@@ -1,0 +1,11 @@
+action (constructAnswerFromOption) {
+  description (Convert an option - the option user tapped on - to a (text) answer)
+  type (Constructor)
+  collect {
+    input (option) {
+      type (option)
+      min (Required) max (One)
+    }
+  }
+  output (answer)
+}

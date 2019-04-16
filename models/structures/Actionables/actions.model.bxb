@@ -1,0 +1,10 @@
+structure (actions) {
+  description (The possible actions that can be made.)
+  
+  // Attack
+  // Communicate
+  // Travel
+  // Rest
+  // Re-Act 
+  // Roll for skill check -> Inspection, Charisma, etc. 
+}

@@ -1,0 +1,5 @@
+train (t-8vul8ljbwl11b1gl9cfcijj3v) {
+  utterance ("[g:player] create a (Dwarf)[v:raceName] (Wizard)[v:className]")
+  plan (Y2BhkC7ISaxML8ovzUvRS8lL8U0sLkkt0gMJphYxyGGVzEstD8Ann5yTWFzsl5ibyiCLVb4oMTkVLM3MwMjABCQZgDQIQgCIDxYFAA==)
+  last-modified (1555146296138)
+}

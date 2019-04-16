@@ -1,0 +1,43 @@
+// Hands free dialogs for navigation
+
+template-macro-def (QUEST_SELECTION_EVENT_1) {
+  content {
+    template ("Want to pick this one?")
+  }
+}
+
+template-macro-def (QUEST_SELECTION_EVENT_2) {
+  content {
+    template ("Is this what you're looking for?")
+  }
+}
+
+template-macro-def (RESULT_OVERFLOW_STATEMENT) {
+  content {
+    template ("That's all I have.")
+  }
+}
+
+template-macro-def (RESULT_UNDERFLOW_STATEMENT) {
+  content {
+    template ("This is the first option.")
+  }
+}
+
+template-macro-def (RESULT_NEXT_EVENT) {
+  content {
+    template ("Would you like to hear the next one?")
+  }
+}
+
+template-macro-def (QUEST_LIST_SUMMARY) {
+  params {
+    param (quests) {
+      type (quest)
+      min (Required) max (Many)
+    }
+  }
+  content {
+    template("I found #{size(quests)} #{concept(quests)}")
+  }
+}

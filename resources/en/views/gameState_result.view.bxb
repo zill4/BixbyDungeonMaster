@@ -1,0 +1,13 @@
+result-view {
+  match {
+    gameState(gameState)
+  }
+
+  render {
+    layout-macro ("journal") {
+      param(journal) {
+        expression (gameState.journal)
+      }
+    }
+  }
+}
