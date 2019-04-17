@@ -1,34 +1,33 @@
 module.exports = [
   {
     title: "The Tired Inn",
-    tags: ["Inn", "Tired"], //used to find this quiz
+    tags: ["Inn", "Tired"], 
     image: {
       url: 'https://pbs.twimg.com/media/DaVEvPZUQAA-Gnd.jpg'
-    }, //optional
+    }, 
     events: [{
         event: "Welcome to the Jasper Inn, what can would you like to do?",
         options: ["Check into a room.", "Grab a shot of dwarven spirits.", "Listen to the bard."],
-        //you can enter the answer as the index of the corresponding option from the "options" (where 0 is the first option)
-        answer: 0, // Corresponds to "Mice cream",
+        answer: 0, 
         lastEvent: false
       },
       {
         event: "A strange Half-orc approaches you. What do you do?",
         options: ["Buy the orc a pint of mead.", "Stare him down.", "Lok'tar Ogar!"],
-        //you can enter the answer as a string instead of using the index
+        
         answer: "Stare him down.",
-        //you can optionally provide an explanation
+     
         explanation: "He says nothing and walks away.",
         lastEvent: true
       }
     ]
   },
   {
-    title: "A night in the forest.",
-    tags: ["forest", "night"], //used to find this quiz
+    title: "A Night in the Forest.",
+    tags: ["forest", "night"], 
     image: {
       url: 'https://i.pinimg.com/originals/1f/05/45/1f054547ad89c86f9414bc25de6eda18.jpg'
-    }, //optional
+    }, 
     events: [{
         event: "You enter a dark and mysterious forest, what do you do?",
         options: ["Setup camp.", "Search your surroundings."],
@@ -36,28 +35,33 @@ module.exports = [
         lastEvent: false
       },
       {
+        event: "A fork in the road ahead which way do you go?",
+        options: ["Left", "right"],
+        answer: ["Left"],
+        lastEvent: false
+      },
+      {
+        event: "A twinkling light appears before you.",
+        options: ["Follow it", "Capture it", "Ignore it"],
+        answer: ["Follow it", "Ignore it"],
+        lastEvent: false
+      },
+       {
         event: "You hear a rustling in the bushes behind you.",
-        options: ["Investigate the foliage.", "Throw a rock into the bush.", "Ignore it."],
+        options: ["Investigate the foliage.", "Throw a rock into the bush.", "Ignore it"],
         answer: ["Investigate the foliage", "Throw a rock into the bush."],
         lastEvent: false
       },
       {
         event: "A massive Owl-bear thunders through the bush!",
         options: ["Attack", "Make owl sounds.", "Run away!"],
-
-        //you have to provide a list of accepted answers if there are no options
         answer: ["Attack", "Run away!"],
-
-        //you can optionally provide an explanation
         explanation: "Fight or flight is the best choice.",
         lastEvent: true
       }
     ]
   }, 
-  // End of presidents quiz
-  
-  // Start of states quiz generated from the spreadsheet
-  { title: "The Ancient City of Jakano", 
+    { title: "The Ancient City", 
    tags: ["jakano","city","ancient"], 
    image: { url: 'https://i.warosu.org/data/tg/img/0337/86/1406780105172.jpg' },  
    events: [
@@ -118,5 +122,4 @@ module.exports = [
      lastEvent: true
     },
   ]},
-  // End of States quiz
 ]

@@ -12,6 +12,7 @@ action (updateGame) {
     }
     // Here instead of just taking the answer
     // We will try to take the option, and start a new event.
+    //CURRENTLY NON-FUNCITONAL
     input (option)
     {
       type (option)

@@ -8,7 +8,7 @@ template-macro-def (quest-total-events-statement) {
   }
   content {
     if (totalEventsCount == 1) {
-        template ("There is one question in this quizz.")
+        template ("There is one event in this quest.")
     } else {
         template ("There are #{totalEventsCount} events in this quest.")      
     }

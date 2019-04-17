@@ -8,9 +8,9 @@ template-macro-def (entry-statement) {
   }
   content {
     if (entry.evaluation) {
-      template ("Correct!")
+      template ("Good Choice")
     } else {
-      template ("Incorrect!")
+      template ("Think Carefully")
     }
   }
 }
