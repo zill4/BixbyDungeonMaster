@@ -1,9 +1,9 @@
 dialog (Result) {
   match
   { 
-       player (playerResult) {
-       from-output: newPlayer (playerOutput)
-     }
+      player (playerResult) {
+      from-output: newPlayer (playerOutput)
+    }
   }
   template("The Player")
 }

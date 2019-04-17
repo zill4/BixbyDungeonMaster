@@ -8,13 +8,13 @@
   //   min (Required) max (Many)
   // }
   // Like Armor or Weapon
-  property (type)
+  property (profType)
   {
-    type(type)
+    type(infoText)
     description (The type of profeciency)
   }
   // Light Armor or scimitar
-  property (name)
+  property (profName)
   {
     type(proficiencyName)
     description (The name of the given profeciency)

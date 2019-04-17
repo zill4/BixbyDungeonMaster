@@ -1,0 +1,8 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (getClass) {
+      accepted-inputs (answer)
+      local-endpoint ("player/GetClass.js")
+    }
+  }
+}

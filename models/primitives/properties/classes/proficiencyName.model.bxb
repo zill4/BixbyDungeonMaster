@@ -1,3 +1,3 @@
-name (proficiencyName) {
+text (proficiencyName) {
   description (The name of the given proficiency.)
 }

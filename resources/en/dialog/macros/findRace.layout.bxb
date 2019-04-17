@@ -1,0 +1,40 @@
+layout-macro-def (race-details) {
+  params {
+    param (race) {
+      type (race)
+      min (Required) max (One)
+    }
+  }
+  content {
+    section {
+      content {
+           image {
+            aspect-ratio (3:4)
+            url ("${value(race.image)}")
+          }
+
+        title-area {
+          halign (Center)
+          slot1 {
+            text {
+              value ("#{value(race.name)}")
+              style (Title_L)
+            }
+          }
+          slot2 {
+            single-line {
+              text {
+                value ("Race Details")
+                style (Title_S)
+              }
+            }
+          }
+        }
+        paragraph {
+          value ("Speed: #{value(race.speed)}\nSize: #{value(race.size)}\nAlignment: #{value(race.alignment)}\n\nAging: #{value(race.age)}\n\nSize Details: #{value(race.sizeDescription)}\n\nLanguage: #{value(race.languages.languageDescription)}")
+          style (Detail_L)
+        }
+      }
+    }
+  }
+}

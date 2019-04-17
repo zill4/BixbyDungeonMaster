@@ -10,9 +10,9 @@ template-macro-def (advance-quest-event) {
     if (eventsLeft == 0) {
       template ("Do you want to see how you did?")
     } else-if (eventsLeft == 1) {
-      template ("Do you want to answer the last question?")
+      template ("Do you want to result the last event?")
     } else {
-      template ("Do you want to answer the next question?")
+      template ("Do you want to result the next event?")
 
     }
   }

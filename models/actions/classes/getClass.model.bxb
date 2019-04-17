@@ -1,0 +1,11 @@
+action (getClass) {
+  description ("Get the class name for the provided character creator.")
+  type(Commit)
+  collect {
+  input (answer)
+    {
+      type (answer)
+    }
+  }
+  output (className)
+}

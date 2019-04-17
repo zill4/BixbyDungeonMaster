@@ -72,7 +72,7 @@ module.exports.function = function newPlayer (raceName, className) {
     // 1. Get class information by searching for class URL
     classInfo = JSON.parse(http.getUrl(classURL));
     // 2. Call a function to load listed objects like proficienies
-    proficiencies = loadProficiencies(classInfo);
+   // proficiencies = loadProficiencies(classInfo);
   }
   
   var player;
@@ -91,35 +91,34 @@ module.exports.function = function newPlayer (raceName, className) {
       // With class profiecieny we can check a recommended class/race combo.
       sizeDescription: sizeDescription,
       // need to add languages array
-      languageDescription: languageDescription,
+      languages: {
+            languageDescription: languageDescription
+      }
       // need to add traits + proficencies array
     },
     class: {
       name: className,
       hitDie: classInfo.hit_die,
-      proficiencies: proficiencies
+      proficiencies: [{}]
     },
     image: myUrl
   }
+  player.class.proficiencies = new Array(classInfo.proficiencies.length);
+  player.class.proficiencies = loadProficiencies(classInfo, player.class.proficiencies);
   return player;
   }
 // Here we load the list of proficiencies for the given class.
 // i.e. Axes, Swords, Light or Heavy Armor
 // Each proficiencey will have a name and type. 
 // i.e. Axe = weapon and light armor = armor
- function loadProficiencies(classInfo)
+ function loadProficiencies(classInfo, proficiencies)
 {
-  var proficiencies = new Array(classInfo.proficiencies.length);
   var i = 0;
   var profInfo;
-  console.log(classInfo.proficiencies);
   for (i = 0; i < classInfo.proficiencies.length; i++)
   {
-    console.log("Where is my issue? " + i)
     profInfo = JSON.parse(http.getUrl(classInfo.proficiencies[i].url));
-    console.log("Here?  " + i)
-    proficiencies[i].name = profInfo.name;
-    proficiencies[i].type = profInfo.type;
+    proficiencies[i] = {profName : profInfo.name, profType : profInfo.type};
   }
   return proficiencies;
 }

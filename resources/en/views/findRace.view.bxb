@@ -1,0 +1,12 @@
+ result-view {
+   match {
+     race (race)
+   }
+   render {
+    layout-macro ("race-details") {
+      param(race) {
+        expression (race)
+      }
+    }
+  }
+}
