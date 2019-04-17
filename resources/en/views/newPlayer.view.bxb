@@ -3,27 +3,50 @@
      player (player)
    }
    render {
-     layout {
-       section {
-         content {
-           single-line {
-             text {
-               style (Detail_M)
-              value ("Race: #{value(player.race)}")
-             }
-           }
-           single-line {
-             text {
-               style (Detail_M)
-              value ("Class: #{value(player.class)}")
-             }
-           }
-          image {
-            aspect-ratio (3:4)
-            url ("${value(player.image)}")
-          }
-         }
-       }
-     }
+    layout-macro ("player-details") {
+      param(player) {
+        expression (player)
+      }
+    }
+  
+//      layout {
+//        section {
+//          content {
+//                      single-line {
+//              text {
+//               style (Title_M)
+//               value ("Race: #{value(player.race.name)}")
+//              }
+//           }
+//           image {
+//             aspect-ratio (3:4)
+//             url ("${value(player.image)}")
+//           }
+// 
+//            single-line {
+//              text {
+//                style (Title_M)
+//               value ("Class: #{value(player.class.name)}")
+//              }
+//            }
+//           cell-card {
+//             slot2 {
+//               content{
+//                 primary{
+//                   template ("Speed: #{value(player.race.speed)}")
+//                   template ("Size: #{value(player.race.size)}")
+//                   template ("Alignment: #{value(player.race.alignment)}")
+//                   template ("Age: #{value(player.race.age)}")
+//                   template ("Size Details: #{value(player.race.sizeDescription)}")
+//                   template ("Language: #{value(player.race.languages.languageDescription)}")
+//                  // template ("Language: #{value(player.class.name)}")
+// 
+//                 }
+//               }
+//             }
+//           }
+//          }
+//        }
+//      }
    }
  }

@@ -1,0 +1,54 @@
+layout-macro-def (player-details) {
+  params {
+    param (player) {
+      type (player)
+      min (Required) max (One)
+    }
+  }
+  content {
+    section {
+      content {
+           image {
+            aspect-ratio (3:4)
+            url ("${value(player.image)}")
+          }
+
+        title-area {
+          halign (Center)
+          slot1 {
+            text {
+              value ("#{value(player.race.name)} - #{value(player.class.name)} ")
+              style (Title_L)
+            }
+          }
+          slot2 {
+            single-line {
+              text {
+                value ("Lv. #{value(player.currentLevel)} • HP. #{value(player.health)}")
+                style (Title_S)
+              }
+            }
+          }
+        }
+        paragraph {
+          value ("Speed: #{value(player.race.speed)}\nSize: #{value(player.race.size)}\nAlignment: #{value(player.race.alignment)}\n\nAging: #{value(player.race.age)}\n\nSize Details: #{value(player.race.sizeDescription)}\n\nLanguage: #{value(player.race.languages.languageDescription)}")
+          style (Detail_L)
+        }
+        partitioned {
+          content {
+            for-each (player.class.proficiencies) {
+              as (attribute) {
+                single-line {
+                  text {
+                    value ("#{value(attribute.profType)} - #{value(attribute.profName)}")
+                    style (Detail_L)
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
