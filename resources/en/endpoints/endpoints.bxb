@@ -28,5 +28,6 @@ endpoints {
       accepted-inputs (option)
       local-endpoint ("state/constructAnswerFromOption.js")
     }
+    
   }
 }

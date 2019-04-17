@@ -40,9 +40,9 @@ structure (race) {
     min (Optional)
     max (Many)
   }
-  // Not sure if I want to add the image to the class.
-  // property (images) {
-  //   type (Image)
-  //   max (Many)
-  // }
+  property (image)
+  {
+    type(viv.core.Url)
+    min (Optional) max (One)
+  }
 }
