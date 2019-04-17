@@ -36,4 +36,11 @@ structure (event) {
     type(viv.core.Boolean)
     min (Optional) max (One)
    }
+  // This is the id that will allow us to switch between events.
+  property (id)
+  {
+    description (The event id that matches itself to a given option)
+    type(viv.core.Integer)
+    min (Optional) max (One)
+  }
 }

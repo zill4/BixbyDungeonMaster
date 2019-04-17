@@ -19,7 +19,7 @@ structure (entry) {
   property (expectedAnswer) {
     type (answer)
     description (expected answer)
-    min (Required) max (One)
+    min (Optional) max (One)
     visibility (Private)
   }
 

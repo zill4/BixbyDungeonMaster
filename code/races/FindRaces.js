@@ -32,7 +32,7 @@ module.exports.function = function findRaces (raceName) {
    {
       if (raceClass[w].name == raceName)
         {
-          myUrl = raceClass[w].classes[5].classUrl
+          myUrl = raceClass[w].classes[4].classUrl
         }
   }
   if (validRace) 

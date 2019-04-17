@@ -1,4 +1,7 @@
 module.exports = [
+  // Each event should have an ID
+  // Each option should also have an ID
+  // These ID's match to provide the next event in a queue.
   {
     title: "The Tired Inn",
     tags: ["Inn", "Tired"], 
@@ -6,120 +9,36 @@ module.exports = [
       url: 'https://pbs.twimg.com/media/DaVEvPZUQAA-Gnd.jpg'
     }, 
     events: [{
-        event: "Welcome to the Jasper Inn, what can would you like to do?",
-        options: ["Check into a room.", "Grab a shot of dwarven spirits.", "Listen to the bard."],
-        answer: 0, 
+        event: "Welcome to the Jasper Inn, what would you like to do?",
+        options: [{text:"Check into a room.", id: 2}, {text: "Grab a shot of dwarven spirits.", id: 3}],
+        id : 1,
+        answer: 1, 
         lastEvent: false
       },
       {
+        event: "You sit in your room and smell a weird scent?",
+        options: [{text: "Check it out.", id: 3}, {text:"Take a nap instead.", id: 4}],
+        id: 2,
+        answer: 1,
+        explanation: "He says nothing and walks away.",
+        lastEvent: false
+      },
+       {
         event: "A strange Half-orc approaches you. What do you do?",
-        options: ["Buy the orc a pint of mead.", "Stare him down.", "Lok'tar Ogar!"],
-        
-        answer: "Stare him down.",
-     
+        options: [{text: "Buy the orc a pint of mead.", id: 4}, {text:"Stare him down.", id: 4}],
+        id: 3,
+        answer: 0,
+        explanation: "He says nothing and walks away.",
+        lastEvent: false
+      },
+       {
+        event: "You feel like you have been just punched in the face.",
+        options: [{text:"Get knocked out.", id: 4}, {text:"Pretend like that didn't happen.", id: 4}],
+        id: 4,
+        answer: 1,
         explanation: "He says nothing and walks away.",
         lastEvent: true
       }
     ]
-  },
-  {
-    title: "A Night in the Forest.",
-    tags: ["forest", "night"], 
-    image: {
-      url: 'https://i.pinimg.com/originals/1f/05/45/1f054547ad89c86f9414bc25de6eda18.jpg'
-    }, 
-    events: [{
-        event: "You enter a dark and mysterious forest, what do you do?",
-        options: ["Setup camp.", "Search your surroundings."],
-        answer: 0,
-        lastEvent: false
-      },
-      {
-        event: "A fork in the road ahead which way do you go?",
-        options: ["Left", "right"],
-        answer: ["Left"],
-        lastEvent: false
-      },
-      {
-        event: "A twinkling light appears before you.",
-        options: ["Follow it", "Capture it", "Ignore it"],
-        answer: ["Follow it", "Ignore it"],
-        lastEvent: false
-      },
-       {
-        event: "You hear a rustling in the bushes behind you.",
-        options: ["Investigate the foliage.", "Throw a rock into the bush.", "Ignore it"],
-        answer: ["Investigate the foliage", "Throw a rock into the bush."],
-        lastEvent: false
-      },
-      {
-        event: "A massive Owl-bear thunders through the bush!",
-        options: ["Attack", "Make owl sounds.", "Run away!"],
-        answer: ["Attack", "Run away!"],
-        explanation: "Fight or flight is the best choice.",
-        lastEvent: true
-      }
-    ]
-  }, 
-    { title: "The Ancient City", 
-   tags: ["jakano","city","ancient"], 
-   image: { url: 'https://i.warosu.org/data/tg/img/0337/86/1406780105172.jpg' },  
-   events: [
-    {event: "You enter the ancient and mysterious city of Jakano, what do you do?", 
-     options: ["Find the nearest inn.","Speak wi    th a guard.","Wander through the city."], 
-     answer: ["Wander through the city.", "Find the nearest inn."], 
-     explanation: "Most guards don't take kindly to strangers.",
-     lastEvent: false
-    },
-    {event: "You walk through a dark and dirty alley way, a mugger appears.", 
-     options: ["Pay the mugger 1 Gold.","Attack.","Turn around and run."], 
-     answer: 2,
-     lastEvent: false},
-    {event: "You meet a bartender named John.", 
-     options: ["Buy a beer.","Ask about any quests in the area.","Talk with John."], 
-     answer: "Buy a beer.", 
-     explanation: "John just wants you to drink.",
-     lastEvent: false
-    },
-    {event: "A bird starts darting towards you.", 
-     options: ["Duck in cover.","Stand your ground.","Make owl noises."], 
-     answer: "Stand your ground.", 
-     explanation: "The bird admires your courage and follows you as a companion.",
-     lastEvent: false
-    },
-    {event: "You notice a beggar in rags as you walk by.", 
-     options: ["Give him 1 Gold coin.","Ignore him and keep walking.","Kick dirt in his face as you walk by."], 
-     answer: 0, 
-     explanation: "The beggar notices your kind heart, he blesses you with greater insight, and as you walk away he vanishes.",
-     lastEvent: false
-    },
-
-    {event: "Tired and hungry, you head to the nearest inn.", 
-     options: ["Order a pint of mead.","Check into a room and go to sleep.","Get in a bar fight."], 
-     answer: 2, 
-     explanation: "The inn breaks out in a havoc, you come face to face with an angry dwarf, and for the next hour trade blows until your knocked out.",
-     lastEvent: false
-    },
-    {event: "Waking up the next morning you find your gear missing.", 
-     options: ["Search the room.","Accept the loss and move on.","Call the guards."], 
-     answer: "Search the room.",
-     lastEvent: false
-    },
-    {event: "You find a hidden door in the room.", 
-     options: ["Enter the hidden passage.","Knock 3 times and see what happens.","Peak through the holes."], 
-     answer: "Enter the hidden passage.",
-     lastEvent: false
-    },
-    {event: "Inside the passge you find your gear, and hear a noise.", 
-     options: ["Call out to the sound.","Put on your gear.","Run towards the sound."], 
-     answer: "Put on your gear.", 
-     explanation: "It is best to be prepared for what lies ahead.",
-     lastEvent: false
-    },
-    {event: "A awful smell starts to creep towards you.", 
-     answer: ["Attack","run away!"], 
-     explanation: "A large ghoul starts rushing towards you, brace yourself.",
-     lastEvent: true
-    },
-  ]},
+  }
 ]

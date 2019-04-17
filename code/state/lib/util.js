@@ -35,8 +35,9 @@ function buildEventFromJson(eventJson, index) {
     if (eventJson.options) {
       for (var i=0; i< eventJson.options.length; i++) {
         options.push({
-          text: eventJson.options[i],
-          alias: String.fromCharCode('A'.charCodeAt(0) + i)
+          text: eventJson.options[i].text,
+          alias: String.fromCharCode('A'.charCodeAt(0) + i),
+          id: eventJson.options[i].id
         })
       }
     }
