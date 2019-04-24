@@ -38,6 +38,14 @@ module.exports = [
         answer: 1,
         explanation: "He says nothing and walks away.",
         lastEvent: true
+      },
+         {
+        event: "You feel like you have been just punched in the face.",
+        options: [{text:"Get knocked out.", id: 4}, {text:"Pretend like that didn't happen.", id: 4}],
+        id: 4,
+        answer: 1,
+        explanation: "He says nothing and walks away.",
+        lastEvent: true
       }
     ]
   }
