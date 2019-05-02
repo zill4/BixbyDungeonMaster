@@ -9,44 +9,52 @@ module.exports = [
       url: 'https://pbs.twimg.com/media/DaVEvPZUQAA-Gnd.jpg'
     }, 
     events: [{
-        event: "Welcome to the Jasper Inn, what would you like to do?",
-        options: [{text:"Check into a room.", id: 2}, {text: "Grab a shot of dwarven spirits.", id: 3}],
-        id : 1,
-        answer: 1, 
-        lastEvent: false
-      },
-      {
-        event: "You sit in your room and smell a weird scent?",
-        options: [{text: "Check it out.", id: 3}, {text:"Take a nap instead.", id: 4}],
-        id: 2,
-        answer: 1,
-        explanation: "He says nothing and walks away.",
-        lastEvent: false
-      },
+      event: "Your boat arrives at the coastal town of Susano, what do you do?",
+      options: [{text:"Look around the ship.", id: 2}, {text: "Head into town.", id: 11}],
+      id : 1,
+      answer: 1, 
+      lastEvent: false
+    },
+    {
+      event: "You chose to look around the ship.",
+      options: [{text: "Head down into the hull of the ship.", id: 3}, {text:"Talk with the firstmate.", id: 4}],
+      id: 2,
+      answer: 1,
+      lastEvent: false
+    },
+     {
+      event: "You discover a prisoner starving, and asking for help.",
+      options: [{text: "Give her all of your rations.", id: 5}, {text:"Ignore her, tell the firstmate the prisoners are starving.", id: 4}],
+      id: 3,
+      answer: 0,
+      lastEvent: false
+    },
+     {
+      event: "The firstmate apears to have drunk himself asleep.",
+      options: [{text:"Take the keys to the prisoners cells.", id: 6}, {text:"Take the keys to the cargo hold.", id: 7}],  
+      id: 4,
+      answer: 1,
+      lastEvent: true
+    },
        {
-        event: "A strange Half-orc approaches you. What do you do?",
-        options: [{text: "Buy the orc a pint of mead.", id: 4}, {text:"Stare him down.", id: 4}],
-        id: 3,
-        answer: 0,
-        explanation: "He says nothing and walks away.",
-        lastEvent: false
-      },
-       {
-        event: "You feel like you have been just punched in the face.",
-        options: [{text:"Get knocked out.", id: 4}, {text:"Pretend like that didn't happen.", id: 4}],
-        id: 4,
-        answer: 1,
-        explanation: "He says nothing and walks away.",
-        lastEvent: true
-      },
-         {
-        event: "You feel like you have been just punched in the face.",
-        options: [{text:"Get knocked out.", id: 4}, {text:"Pretend like that didn't happen.", id: 4}],
-        id: 4,
-        answer: 1,
-        explanation: "He says nothing and walks away.",
-        lastEvent: true
-      }
-    ]
-  }
-]
+      event: "You chose to head into town.",
+      options: [{text:"Go to the nearest Inn.", id: 12}, {text:"Head to the town square.", id: 13}],
+      id: 11,
+      answer: 1,
+      lastEvent: true
+    },
+    {
+      event: "You arrive at The Black Iron Inn.",
+      options: [{text:"-path in progress-", id: 12}, {text:"-path in progress-", id: 12}],  
+      id: 12,
+      answer: 1,
+      lastEvent: true
+    },
+    {
+    event: "You arrive in the Susano town square. A large festival seems to be taking place, what do you do?",
+    options: [{text:"Ask a strnger what is going on.", id: 13}, {text:"Go to the adventurers quest board.", id: 13}],
+    id: 13,
+    answer: 1,
+    lastEvent: true
+  }]
+  }]
