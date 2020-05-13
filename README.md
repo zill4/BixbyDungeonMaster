@@ -15,7 +15,7 @@ Then while in Bixby Studio add this repository by clicking File -> Open Capsule 
 ## Authors
 
 * **Justin Crisp** -  - [Zill4](https://github.com/zill4)
-* **Jo Chang** -  - [MagicHatJo](https://github.com/MagicHatJo)
+
 
 
 ## Acknowledgments
